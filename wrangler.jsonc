@@ -1,15 +1,14 @@
 {
-  // Cloudflare Pages config for the Vite build output
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "victorian-plumbing-tech-task",
-  "pages_build_output_dir": "dist",
-  "compatibility_date": "2026-01-10",
-  "build": {
-    "command": "npm run build"
+  "account_id": "70f05ee1c638d86885ceb99a605be008",
+  "compatibility_date": "2025-03-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".dist/assets"
   },
-  "dev": {
-    "ip": "127.0.0.1",
-    "port": 8788,
-    "local_protocol": "http",
-    "upstream_protocol": "https"
+  "observability": {
+    "enabled": true
   }
 }
