@@ -1,0 +1,15 @@
+{
+  // Cloudflare Pages config for the Vite build output
+  "name": "victorian-plumbing-tech-task",
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2026-01-10",
+  "build": {
+    "command": "npm run build"
+  },
+  "dev": {
+    "ip": "127.0.0.1",
+    "port": 8788,
+    "local_protocol": "http",
+    "upstream_protocol": "https"
+  }
+}
