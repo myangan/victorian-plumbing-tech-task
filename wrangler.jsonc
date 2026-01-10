@@ -3,11 +3,11 @@
   "name": "victorian-plumbing-tech-task",
   "account_id": "70f05ee1c638d86885ceb99a605be008",
   "compatibility_date": "2025-03-01",
-  "main": "src/main.tsx",
+  "main": "src/worker.ts",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
     "binding": "ASSETS",
-    "directory": ".dist/assets"
+    "directory": "dist"
   },
   "observability": {
     "enabled": true
