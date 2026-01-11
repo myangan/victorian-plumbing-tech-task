@@ -13,8 +13,6 @@ const Filters = ({
   filters: { [key: string]: any[] };
   setFilters: Dispatch<SetStateAction<{ [key: string]: any[] }>>;
 }) => {
-  console.log({ facets });
-  console.log({ initialFacets });
   return (
     <div className="my-4 p-4 md:col-span-3">
       <h2 className="text-xl font-semibold mb-2">Filter by</h2>
@@ -47,7 +45,6 @@ const Filters = ({
       </div>
       <div className="flex flex-col gap-2">
         {initialFacets?.map((facet: any) => {
-          console.log({ facet });
           const availableFacet = facets.find(
             (f: any) => f.identifier === facet.identifier
           );
@@ -63,7 +60,6 @@ const Filters = ({
                   const availableFacetOption = availableFacet?.options.find(
                     (o: any) => o.identifier === option.identifier
                   );
-                  console.log({ disabledFacet: availableFacetOption });
                   return (
                     <label
                       key={option.displayValue}
