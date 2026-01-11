@@ -6,7 +6,7 @@ const Hero = ({ slug }: { slug: string }) => {
   const [active, setActive] = useState(HeroTabs[0]);
 
   return (
-    <section className="bg-white text-black py-20 ">
+    <section className="bg-transparent text-black py-20 ">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-10">
           {formatTitle(slug)}
@@ -25,7 +25,7 @@ const Hero = ({ slug }: { slug: string }) => {
             </div>
           ))}
         </div>
-        <div className="mx-30">{active.value}</div>
+        <div className="md:mx-30">{active.value}</div>
       </div>
     </section>
   );

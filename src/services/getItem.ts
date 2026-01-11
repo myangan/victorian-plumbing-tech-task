@@ -10,7 +10,8 @@ type Query = {
   };
 };
 
-const postItem = async (query: Query) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const postItem: (query: Query) => Promise<any> = async (query: Query) => {
   const response = await fetch(
     "https://spanishinquisition.victorianplumbing.co.uk/interviews/listings?apikey=yj2bV48J40KsBpIMLvrZZ1j1KwxN4u3A83H8IBvI",
     {

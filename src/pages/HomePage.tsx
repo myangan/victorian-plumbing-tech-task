@@ -10,12 +10,12 @@ const HomePage = () => {
       <p className="mt-4 text-gray-700">
         This is my tech task for victoria plumbing.
       </p>
-      <div className="flex flex-row items-center gap-5 mt-6">
+      <div className="flex flex-row items-center gap-5 mt-6 hover:scale-110 transition-transform">
         {homePageLinks.map((link) => (
           <Link
             key={link.path}
             to={link.path}
-            className="border-b border-gray-300 px-4 py-2 rounded-lg hover:border hover:border-blue-500 hover:text-blue-500 transition"
+            className="border-b border-gray-300 px-4 py-2 rounded-lg hover:text-white hover:bg-black transition"
           >
             {link.label}
           </Link>
