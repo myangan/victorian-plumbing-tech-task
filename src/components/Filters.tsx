@@ -60,9 +60,10 @@ const Filters = ({
               <h3 className="font-semibold text-xl">{facet.displayName}</h3>
               <div className="flex flex-col ml-4">
                 {facet.options.map((option: any) => {
-                  const disabledFacet = !availableFacet?.options.find(
+                  const availableFacetOption = availableFacet?.options.find(
                     (o: any) => o.identifier === option.identifier
                   );
+                  console.log({ disabledFacet: availableFacetOption });
                   return (
                     <label
                       key={option.displayValue}
@@ -98,10 +99,12 @@ const Filters = ({
                         checked={filters[facet.identifier]?.some(
                           (val) => val.identifier === option.identifier
                         )}
-                        disabled={disabledFacet}
+                        disabled={!availableFacetOption}
                       />
                       <span>{`${option.displayValue} (${
-                        disabledFacet ? 0 : option.productCount
+                        !availableFacetOption
+                          ? 0
+                          : availableFacetOption.productCount
                       })`}</span>
                     </label>
                   );
